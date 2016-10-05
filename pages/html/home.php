@@ -39,9 +39,7 @@
 					<header class="major">
 						<h2>Qui suis-je ?</h2>
 					</header>
-					<p>Je m'apelle Zao Soula, j'ai
-						<?echo date(Y)-2002?> ans et je suis passionné d'informatique et d'electronique. Depuis maintenant
-							<?echo date(Y)-2012?> ans je pratique le développement web, et maitrise aujourd'hui l'HTML, le PHP, le CSS et le Javascript.</p>
+					<p>Je m'appelle Zao Soula, j'ai <?echo date(Y)-2002?> ans et je suis passionné d'informatique et d'électronique. Depuis maintenant <?echo date(Y)-2012?> ans je pratique le développement web, et maitrise aujourd'hui l'HTML, le PHP, le CSS et le Javascript.</p>
 					<ul class="actions">
 						<li><a href="#expe" class="button scroll">Mes expériences</a></li>
 					</ul>
