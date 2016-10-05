@@ -136,7 +136,7 @@ $resume['abilities']['tools'][] = array(
 
 
 } catch ( PDOException $e ) {
-	var_dump($e);
+	logger(' PDOException : '.json_encode($e)); //Add in log
 }
 
 ?>
