@@ -22,7 +22,7 @@
 	<nav id="nav">
 		<ul>
 			<li><a href="#me" class="active">Qui suis-je ?</a></li>
-			<li><a href="#expe">Experiences</a></li>
+			<li><a href="#expe">Expériences</a></li>
 			<li><a href="#abili">Compétences</a></li>
 			<li><a href="#project">Projets</a></li>
 			<li><a href="#contact">Contact</a></li>
@@ -55,7 +55,7 @@
 			</header>
 			<div class="experiences">
 
-				<h2><strong>Education</strong></h2>
+				<h2><strong>Éducation</strong></h2>
 				<?
 						foreach($resume['experiences']['educations'] as $key => $value){
 								echo '<div class="experience row">
@@ -121,7 +121,7 @@
 			<header class="major">
 				<h2>Compétences</h2>
 			</header>
-			<div id="abilities">
+			<div class="abilities">
 				<h2><strong>Compétences</strong></h2>
 
 				<div class="row">
@@ -149,7 +149,7 @@
 						?>
 				</div>
 			</div>
-	<div id="abilities">
+	<div class="abilities">
 		<h2><strong>Langues</strong></h2>
 		<div class="row">
 
@@ -179,7 +179,7 @@
 						?>
 		</div>
 	</div>
-	<div id="abilities">
+	<div class="abilities">
 		<h2><strong>Logiciels</strong></h2>
 		<div class="row">
 

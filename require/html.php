@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html lang="fr">
   <head>
     <meta charset="utf-8">
@@ -24,7 +23,6 @@
     <meta property="og:description" content="Je m'appelle Zao Soula, j'ai <?echo date(Y)-2002?> ans et je suis passionné d'informatique et d'électronique. Depuis maintenant <?echo date(Y)-2012?> ans je pratique le développement web, et maitrise aujourd'hui l'HTML, le PHP, le CSS et le Javascript.">
 
 
-    <meta charset="utf-8" />
     		<meta name="viewport" content="width=device-width, initial-scale=1" />
     		<!--[if lte IE 8]><script src="<?echo BaseUrl?>/assets/js/ie/html5shiv.js"></script><![endif]-->
     		<link rel="stylesheet" href="<?echo BaseUrl?>/assets/css/main.css" />
