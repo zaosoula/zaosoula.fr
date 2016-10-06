@@ -10,7 +10,7 @@
 		<p>Développeur Web</p>
 		<ul class="icons">
 			<li><a href="https://twitter.com/zarque7" target="_blank" class="icon fa-twitter alt"><span class="label">Twitter</span></a></li>
-			<li><a href="https://facebook.com/profile.php?id=100009585529575&ref=ts&fref=ts" class="icon fa-facebook alt"><span class="label">Facebook</span></a></li>
+			<li><a href="https://www.facebook.com/Zao-Soula-142126902851327" class="icon fa-facebook alt"><span class="label">Facebook</span></a></li>
 			<li><a href="https://instagram.com/zarque7" target="_blank" class="icon fa-instagram alt"><span class="label">Instagram</span></a></li>
 			<li><a href="https://github.com/zarque" target="_blank" class="icon fa-github alt"><span class="label">GitHub</span></a></li>
 			<li><a href="https://linkedin.com/in/zaosoula" target="_blank" class="icon fa-linkedin alt"><span class="label">Linkedin</span></a></li>
@@ -251,7 +251,7 @@
 		<h2>Me contacter</h2>
 		<ul class="icons">
 			<li><a href="https://twitter.com/zarque7" target="_blank" class="icon fa-twitter alt"><span class="label">Twitter</span></a></li>
-			<li><a href="https://facebook.com/profile.php?id=100009585529575&ref=ts&fref=ts" class="icon fa-facebook alt"><span class="label">Facebook</span></a></li>
+			<li><a href="https://www.facebook.com/Zao-Soula-142126902851327" class="icon fa-facebook alt"><span class="label">Facebook</span></a></li>
 			<li><a href="https://instagram.com/zarque7" target="_blank" class="icon fa-instagram alt"><span class="label">Instagram</span></a></li>
 			<li><a href="https://github.com/zarque" target="_blank" class="icon fa-github alt"><span class="label">GitHub</span></a></li>
 			<li><a href="https://linkedin.com/in/zaosoula" target="_blank" class="icon fa-linkedin alt"><span class="label">Linkedin</span></a></li>
