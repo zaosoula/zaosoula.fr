@@ -9,6 +9,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title><?echo $Page->getTitle();?></title>
 
+
+    <link rel="apple-touch-icon" sizes="180x180" href="<?echo BaseUrl?>/assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="<?echo BaseUrl?>/assets/icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="<?echo BaseUrl?>/assets/icons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="<?echo BaseUrl?>/assets/icons/manifest.json">
+    <link rel="mask-icon" href="<?echo BaseUrl?>/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="<?echo BaseUrl?>/assets/icons/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Zao Soula">
+    <meta name="application-name" content="Zao Soula">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="<?echo BaseUrl?>/assets/icons/mstile-144x144.png">
+    <meta name="msapplication-config" content="<?echo BaseUrl?>/assets/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@zarque7">
     <meta name="twitter:creator" content="@zarque7">
@@ -21,6 +35,8 @@
     <meta property="og:url" content="https://zaosoula.fr/">
     <meta property="og:image" content="https://zaosoula.fr/assets/img/screen.png">
     <meta property="og:description" content="Je m'appelle Zao Soula, j'ai <?echo date(Y)-2002?> ans et je suis passionné d'informatique et d'électronique. Depuis maintenant <?echo date(Y)-2012?> ans je pratique le développement web, et maitrise aujourd'hui l'HTML, le PHP, le CSS et le Javascript.">
+
+
 
 
     		<meta name="viewport" content="width=device-width, initial-scale=1" />
