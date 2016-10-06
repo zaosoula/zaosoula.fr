@@ -43,14 +43,14 @@
   ?>
 
   		<!-- Scripts -->
-  			<script src="<?echo BaseUrl?>/assets/js/jquery.min.js" async></script>
-  			<script src="<?echo BaseUrl?>/assets/js/jquery.scrollex.min.js" async></script>
-  			<script src="<?echo BaseUrl?>/assets/js/jquery.scrolly.min.js" async></script>
-  			<script src="<?echo BaseUrl?>/assets/js/skel.min.js" async></script>
-  			<script src="<?echo BaseUrl?>/assets/js/particles.min.js" async></script>
-  			<script src="<?echo BaseUrl?>/assets/js/util.js" async></script>
+  			<script src="<?echo BaseUrl?>/assets/js/jquery.min.js" ></script>
+  			<script src="<?echo BaseUrl?>/assets/js/jquery.scrollex.min.js" ></script>
+  			<script src="<?echo BaseUrl?>/assets/js/jquery.scrolly.min.js" ></script>
+  			<script src="<?echo BaseUrl?>/assets/js/skel.min.js" ></script>
+  			<script src="<?echo BaseUrl?>/assets/js/particles.min.js" ></script>
+  			<script src="<?echo BaseUrl?>/assets/js/util.js" ></script>
   			<!--[if lte IE 8]><script src="<?echo BaseUrl?>/assets/js/ie/respond.min.js"></script><![endif]-->
-  			<script src="<?echo BaseUrl?>/assets/js/main.js" async></script>
+  			<script src="<?echo BaseUrl?>/assets/js/main.js" ></script>
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
