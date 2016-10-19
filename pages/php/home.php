@@ -1,7 +1,7 @@
 <?
-$Page = new Page(array(
-	'title'=>'Zao Soula - Développeur Web',
-));
-
 $resume = new Resume('loadBDD');
+
+$Page = new Page(array(
+	'title'=>$resume->basics['name'].' - '.$resume->basics['label'],
+));
 ?>
