@@ -8,7 +8,7 @@ function logger($message){
 spl_autoload_register('classAutoload');
 function classAutoload($class)
 {
-	include __DIR__.'/../class/' . $class . '.php';
+	include __DIR__.'/../../class/' . $class . '.php';
 }
 
 //Secure $_GET in $sGET & $_POST in $sPost

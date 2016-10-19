@@ -47,15 +47,8 @@
 
   </head>
   <body>
-    <?
-      if (in_array("header", $Page->getRequire())) //Check if header need to be include (set in php file of page)
-        require_once('require/header.php');
-  ?>
 <?
     require_once('pages/html/'.$pageName.'.php'); //Load the html file of page
-
-    if (in_array("footer", $Page->getRequire())) //Check if foter need to be include (set in php file of page)
-      require_once('require/footer.php');
   ?>
 
   		<!-- Scripts -->

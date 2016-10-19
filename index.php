@@ -3,7 +3,7 @@
  require_once('configs/config.php');
 
  //Load common function file
- require_once('require/commonFunc.php');
+ require_once('require/basic/commonFunc.php');
 
  //Load load page
  if(!empty($sGET['p'])){ //Check if url attribute p is not empty
@@ -27,7 +27,7 @@
  }
 
  //Load page HTML template
- require('require/html.php');
+ require('require/basic/html.php');
 
 
 ?>
