@@ -1,3 +1,6 @@
+<?
+if(!empty($resume->projects)){
+?>
 <section id="project" class="main special">
 		<header class="major">
 			<h2>Projets</h2>
@@ -26,3 +29,4 @@
 			</ul>
 		</footer>
 	</section>
+<?}?>
