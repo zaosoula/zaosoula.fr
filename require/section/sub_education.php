@@ -1,5 +1,5 @@
 <div class="experiences">
-  <h2><strong>Éducation</strong></h2>
+  <h2><strong><? echo $resume->param['title_education'];?></strong></h2>
     <?
       foreach($resume->education as $key => $value){
           echo '<div class="experience row">

@@ -8,6 +8,7 @@
  */
 
 class Resume {
+    public $param = array();
     public $basics = array();
     public $work = array();
     public $education = array();
@@ -18,6 +19,7 @@ class Resume {
 
     public function __construct($command = null)
     {
+        $this->loadBDDParam();
         if(!empty($command) && is_callable(array($this, $command)))
             $this->$command();
     }
@@ -41,7 +43,20 @@ class Resume {
       if(empty($this->tools))
         $this->loadBDDTools();
     }
+    private function loadBDDParam(){
+      try{
+        $sql = "SELECT * FROM param";
+        $pdo = Connexion::getInstance ();
+        $sth = $pdo->query ( $sql );
+        $res = $sth->fetchAll (PDO::FETCH_ASSOC);
 
+        foreach ( $res as $row ) {
+          $this->param[$row['name']] = $row['value'];
+        }
+      } catch ( PDOException $e ) {
+        logger('Resume loadBDDParam Error - PDOException : '.json_encode($e)); //Add in log
+      }
+    }
     private function loadBDDBasics(){
       try{
       	$sql = "SELECT * FROM basics";

@@ -1,5 +1,5 @@
 <div class="abilities">
-<h2><strong>Logiciels</strong></h2>
+<h2><strong><? echo $resume->param['title_tools'];?></strong></h2>
 <div class="row">
 
   <?

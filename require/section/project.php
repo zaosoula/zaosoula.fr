@@ -3,7 +3,7 @@ if(!empty($resume->projects)){
 ?>
 <section id="project" class="main special">
 		<header class="major">
-			<h2>Projets</h2>
+			<h2><? echo $resume->param['title_project'];?></h2>
 		</header>
 
 		<div class="row uniform projects">
@@ -22,11 +22,5 @@ if(!empty($resume->projects)){
 						}
 					?>
 			</div>
-
-		<footer class="major">
-			<ul class="actions">
-				<li><a href="#contact" class="button scroll">Me contacter</a></li>
-			</ul>
-		</footer>
 	</section>
 <?}?>

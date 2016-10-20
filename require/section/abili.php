@@ -4,7 +4,7 @@
 <!-- Second Section -->
 <section id="abili" class="main special">
   <header class="major">
-    <h2>Compétences</h2>
+    <h2><? echo $resume->param['title_abili'];?></h2>
   </header>
 <?
     if(!empty($resume->skills))
@@ -14,12 +14,5 @@
     if(!empty($resume->tools))
       require('require/section/sub_tools.php');
 ?>
-
-
-<footer class="major">
-<ul class="actions">
-<li><a href="#project" class="button scroll">Mes projets</a></li>
-</ul>
-</footer>
 </section>
 <?}?>
