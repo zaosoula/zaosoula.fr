@@ -10,17 +10,17 @@
     <title><?echo $Page->getTitle();?></title>
 
 
-    <link rel="apple-touch-icon" sizes="180x180" href="<?echo BaseUrl?>/assets/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="<?echo BaseUrl?>/assets/icons/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="<?echo BaseUrl?>/assets/icons/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="<?echo BaseUrl?>/assets/icons/manifest.json">
-    <link rel="mask-icon" href="<?echo BaseUrl?>/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="<?echo BaseUrl?>/assets/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?echo BaseUrlAdmin?>/assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="<?echo BaseUrlAdmin?>/assets/icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="<?echo BaseUrlAdmin?>/assets/icons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="<?echo BaseUrlAdmin?>/assets/icons/manifest.json">
+    <link rel="mask-icon" href="<?echo BaseUrlAdmin?>/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="<?echo BaseUrlAdmin?>/assets/icons/favicon.ico">
     <meta name="apple-mobile-web-app-title" content="Zao Soula">
     <meta name="application-name" content="Zao Soula">
     <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-TileImage" content="<?echo BaseUrl?>/assets/icons/mstile-144x144.png">
-    <meta name="msapplication-config" content="<?echo BaseUrl?>/assets/icons/browserconfig.xml">
+    <meta name="msapplication-TileImage" content="<?echo BaseUrlAdmin?>/assets/icons/mstile-144x144.png">
+    <meta name="msapplication-config" content="<?echo BaseUrlAdmin?>/assets/icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -40,11 +40,11 @@
 
 
     		<meta name="viewport" content="width=device-width, initial-scale=1" />
-    		<!--[if lte IE 8]><script src="<?echo BaseUrl?>/assets/js/ie/html5shiv.js"></script><![endif]-->
-    		<link rel="stylesheet" href="<?echo BaseUrl?>/assets/css/main.css" />
-    		<link rel="stylesheet" href="<?echo BaseUrl?>/admin/assets/css/main.css" />
-    		<!--[if lte IE 9]><link rel="stylesheet" href="<?echo BaseUrl?>/assets/css/ie9.css" /><![endif]-->
-    		<!--[if lte IE 8]><link rel="stylesheet" href="<?echo BaseUrl?>/assets/css/ie8.css" /><![endif]-->
+    		<!--[if lte IE 8]><script src="<?echo BaseUrlAdmin?>/assets/js/ie/html5shiv.js"></script><![endif]-->
+    		<link rel="stylesheet" href="<?echo BaseUrlAdmin?>/assets/css/main.css" />
+    		<link rel="stylesheet" href="<?echo BaseUrlAdmin?>/admin/assets/css/main.css" />
+    		<!--[if lte IE 9]><link rel="stylesheet" href="<?echo BaseUrlAdmin?>/assets/css/ie9.css" /><![endif]-->
+    		<!--[if lte IE 8]><link rel="stylesheet" href="<?echo BaseUrlAdmin?>/assets/css/ie8.css" /><![endif]-->
 
   </head>
   <body>
@@ -53,14 +53,14 @@
   ?>
 
   		<!-- Scripts -->
-  			<script src="<?echo BaseUrl?>/assets/js/jquery.min.js" ></script>
-  			<script src="<?echo BaseUrl?>/assets/js/jquery.scrollex.min.js" ></script>
-  			<script src="<?echo BaseUrl?>/assets/js/jquery.scrolly.min.js" ></script>
-  			<script src="<?echo BaseUrl?>/assets/js/skel.min.js" ></script>
-  			<script src="<?echo BaseUrl?>/assets/js/particles.min.js" ></script>
-  			<script src="<?echo BaseUrl?>/assets/js/util.js" ></script>
-  			<!--[if lte IE 8]><script src="<?echo BaseUrl?>/assets/js/ie/respond.min.js"></script><![endif]-->
-  			<script src="<?echo BaseUrl?>/assets/js/main.js" ></script>
+  			<script src="<?echo BaseUrlAdmin?>/assets/js/jquery.min.js" ></script>
+  			<script src="<?echo BaseUrlAdmin?>/assets/js/jquery.scrollex.min.js" ></script>
+  			<script src="<?echo BaseUrlAdmin?>/assets/js/jquery.scrolly.min.js" ></script>
+  			<script src="<?echo BaseUrlAdmin?>/assets/js/skel.min.js" ></script>
+  			<script src="<?echo BaseUrlAdmin?>/assets/js/particles.min.js" ></script>
+  			<script src="<?echo BaseUrlAdmin?>/assets/js/util.js" ></script>
+  			<!--[if lte IE 8]><script src="<?echo BaseUrlAdmin?>/assets/js/ie/respond.min.js"></script><![endif]-->
+  			<script src="<?echo BaseUrlAdmin?>/assets/js/main.js" ></script>
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
