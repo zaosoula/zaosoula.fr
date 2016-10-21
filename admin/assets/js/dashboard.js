@@ -3,8 +3,8 @@ $(document).ready(function(){
     $('#editableHiddenForm').append('<input type="hidden" name="'+$(this).data('editable-name')+'"/>');
     switch($(this).data('editable-mode')) {
       case "input":
-            $(this).html('<input type="text" name="editable_'+$(this).data('editable-name')+'" value="'+$(this).text()+'" class="editableInput">');
-
+        $(this).html('<input type="text" name="editable_'+$(this).data('editable-name')+'" value="'+$(this).text()+'" class="editableInput">');
+        break;
       case "textarea":
         $(this).html('<textarea type="text" name="editable_'+$(this).data('editable-name')+'" class="editableTextarea">'+$(this).html().replace(/<br(\/)?>/g, "\r\n")+'</textarea>').find('textarea').autosize();
         break;
