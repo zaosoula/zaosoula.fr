@@ -53,7 +53,7 @@ class Page {
     public function checkRights($right){
       switch ($right) {
         case 'login':
-          if(!empty($_SESSION['user']))
+          if(!empty($_SESSION['user']) && $_SESSION['user']['status']=="auth")
             return true;
           else
             return false;

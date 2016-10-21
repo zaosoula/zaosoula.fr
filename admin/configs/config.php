@@ -1,0 +1,3 @@
+<?
+    require('../configs/config.php');
+?>

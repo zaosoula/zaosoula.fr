@@ -45,7 +45,7 @@ class Resume {
     }
     private function loadBDDParam(){
       try{
-        $sql = "SELECT * FROM param";
+        $sql = "SELECT *  FROM `param` WHERE `name` NOT LIKE 'auth_%'";
         $pdo = Connexion::getInstance ();
         $sth = $pdo->query ( $sql );
         $res = $sth->fetchAll (PDO::FETCH_ASSOC);

@@ -1,0 +1,30 @@
+Options -indexes +FollowSymlinks
+ <IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  RewriteRule ^index(\.html)?(/)?$ index.php?p=home  [L]
+  RewriteRule ^([a-zA-Z0-9_\-]+)(\.html)?$ index.php?p=$1  [L]
+
+
+  RewriteCond %{HTTP_HOST} ^www\.zaosoula\.fr [NC]
+  RewriteRule ^(.*)$ https://zaosoula.fr/$1 [L,R=301]
+
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+Header edit Set-Cookie ^(.*)$ $1;HttpOnly;Secure
+Header always set X-FRAME-OPTIONS "DENY"
+Header always set X-XSS-Protection "1; mode=block"
+Header always set X-Content-Type-Options "nosniff"
+</IfModule>
