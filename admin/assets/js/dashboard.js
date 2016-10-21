@@ -4,9 +4,10 @@ $(document).ready(function(){
     switch($(this).data('editable-mode')) {
       case "input":
             $(this).html('<input type="text" name="editable_'+$(this).data('editable-name')+'" value="'+$(this).text()+'" class="editableInput">');
-          break;
+
       case "textarea":
-        $(this).html('<textarea type="text" name="editable_'+$(this).data('editable-name')+'" class="editableTextarea">'+$(this).html().replace(/<br(\/)?>/g, "\r\n")+'</textarea>').find('textarea').autosize();        break;
+        $(this).html('<textarea type="text" name="editable_'+$(this).data('editable-name')+'" class="editableTextarea">'+$(this).html().replace(/<br(\/)?>/g, "\r\n")+'</textarea>').find('textarea').autosize();
+        break;
       default:
           break;
     }

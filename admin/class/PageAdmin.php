@@ -26,10 +26,10 @@ class PageAdmin extends Page
         if(file_exists('assets/'.$asset)){
           switch (pathinfo('assets/'.$asset)['extension']) {
             case 'js':
-              echo '<script src="'.BaseUrl.'/admin/assets/'.$asset.'"></script>';
+              echo '<script src="'.BaseUrlAdmin.'/assets/'.$asset.'"></script>';
               break;
             case 'css':
-              echo '<link href="'.BaseUrl.'/admin/assets/'.$asset.'" rel="stylesheet">';
+              echo '<link href="'.BaseUrlAdmin.'/assets/'.$asset.'" rel="stylesheet">';
                 break;
             default:
           }

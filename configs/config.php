@@ -20,6 +20,9 @@ if (!defined('SqlPass'))
 if (!defined('SqlDb'))
 	define('SqlDb','database');
 
-	if (!defined('BaseUrl'))
-		define('BaseUrl','');
+if (!defined('BaseUrl'))
+	define('BaseUrl','');
+
+if (!defined('BaseUrlAdmin'))
+	define('BaseUrlAdmin','');
 ?>
