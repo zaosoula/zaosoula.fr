@@ -15,7 +15,7 @@
   <div id="main">
     <section class="main special">
       <header class="major">
-        <h2>Login</h2>
+        <h2>Connexion</h2>
       </header>
       <form id="loginform" method="post" action="#">
       	<div class="row uniform">
@@ -27,7 +27,7 @@
       		</div>
       		<div class="12u$">
       			<ul class="actions">
-      				<li><input type="submit" value="Login" class="special"></li>
+      				<li><input type="submit" value="Connexion" class="special"></li>
       			</ul>
       		</div>
       	</div>

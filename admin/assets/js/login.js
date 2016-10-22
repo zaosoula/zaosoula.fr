@@ -26,7 +26,13 @@ $(document).ready(function(){
             $(location).attr("href", 'dashboard');
             break;
           default:
-          alert(data);
+            swal({
+              title: "Êtes-vous sûr ?",
+              text: "Désolés ce ne sont pas les bons identifiants",
+              type: "warning",
+              showConfirmButton: false,
+              timer: 2000,
+            });
             $('input[name=password],input[name=username]').val("");
             $('input[name=username]').focus();
           break;
