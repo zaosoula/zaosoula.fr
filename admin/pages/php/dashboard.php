@@ -6,6 +6,7 @@ $Page = new PageAdmin(array(
 	'assets'=>array(
 				'plugins/sweetalert/sweetalert.min.js',
 				'plugins/autosize/jquery.autosize.min.js',
+				'plugins/Autolinker/Autolinker.min.js',
         'js/dashboard.js',
 				'plugins/sweetalert/sweetalert.css',
   )

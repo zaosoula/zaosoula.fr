@@ -125,6 +125,7 @@ body.stop-scrolling {
       transform: scale(1); }
   .sweet-alert input {
     width: 100%;
+    color: #575757;
     box-sizing: border-box;
     border-radius: 3px;
     border: 1px solid #d7d7d7;

@@ -160,7 +160,7 @@ class Resume {
     }
     private function loadBDDProfiles(){
       try{
-        $sql = "SELECT * FROM profiles ORDER BY `order` ASC";
+        $sql = "SELECT * FROM profiles";
         $pdo = Connexion::getInstance ();
         $sth = $pdo->query ( $sql );
         $res = $sth->fetchAll (PDO::FETCH_ASSOC);
@@ -168,9 +168,11 @@ class Resume {
 
         foreach ( $res as $row ) {
           $this->basics['profiles'][] = array(
+            "id"=>$row['id'],
             "network"=>$row['network'],
             "username"=>$row['username'],
-            "url"=>$row['url']
+            "url"=>$row['url'],
+            "icon"=>$row['icon'],
           );
         }
 

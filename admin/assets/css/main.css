@@ -42,6 +42,21 @@ z-index: 99999999;
   display: flex;
     align-items: center;
 }
+.sweet-alert .icon.alt{
+  border-color: #dddddd;
+  color: #636363;
+}
+.disabled{
+  position: relative;
+}
+.disabled .overlay{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: rgba(0, 0, 0, 0.75);
+}
 @media screen and (max-width: 831px){
 .editableBanner{
   padding: 1em 1em 1em 1em;

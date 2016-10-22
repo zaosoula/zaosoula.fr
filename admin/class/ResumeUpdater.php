@@ -46,8 +46,7 @@ class ResumeUpdater extends Resume
     /// BASICS //////
    foreach($this->basics as $key => $valeur)
    {
-
-     if($valeur != $data->basics[$key]){
+     if($valeur != $data->basics[$key] && $key != 'profiles'){
        try{
          $sql = "UPDATE `basics` SET `value`= :NewValue WHERE `name` = :Name  AND `value` = :LastValue";
          $pdo = Connexion::getInstance ();
@@ -62,6 +61,35 @@ class ResumeUpdater extends Resume
        }
      }
    }
+   /// PROFILES //////
+  foreach($this->basics['profiles'] as $key => $valeur)
+  {
+    if($valeur['action'] == 'created'){
+      try{
+        $sql = "INSERT INTO `profiles`(`url`, `icon`) VALUES ( :Url , :Icon )";
+        $pdo = Connexion::getInstance ();
+        $sth = $pdo->prepare ( $sql );
+        $sth->bindParam ( ':Url',  $valeur['url'], PDO::PARAM_STR);
+        $sth->bindParam ( ':Icon',  $valeur['icon'], PDO::PARAM_STR);
+        $sth->execute();
+          logger("ResumeUpdater create : \"".$valeur['url']."\"  ajouté avec l'icon \"".$valeur['icon']."\"");
+      } catch ( PDOException $e ) {
+          logger('ResumeUpdater create Error - PDOException : '.json_encode($e)); //Add in log
+      }
+    }
+    if($valeur['action'] == 'removed'){
+      try{
+        $sql = "DELETE FROM `profiles` WHERE `id` = :Id";
+        $pdo = Connexion::getInstance ();
+        $sth = $pdo->prepare ( $sql );
+        $sth->bindParam ( ':Id',  $valeur['id'], PDO::PARAM_INT);
+        $sth->execute();
+          logger("ResumeUpdater delete : \"".$valeur['url']."\"  supprimé");
+      } catch ( PDOException $e ) {
+          logger('ResumeUpdater delete Error - PDOException : '.json_encode($e)); //Add in log
+      }
+    }
+  }
    return true;
   }
 }
