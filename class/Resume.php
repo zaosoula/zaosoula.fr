@@ -81,6 +81,7 @@ class Resume {
 
       	foreach ( $res as $row ) {
       		$this->education[] = array(
+      		"id"=>$row['id'],
       		"institution"=>$row['institution'],
       		"startDate"=>$row['startDate'],
       		"endDate"=>$row['endDate'],

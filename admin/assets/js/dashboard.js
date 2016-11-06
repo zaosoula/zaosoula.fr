@@ -121,7 +121,7 @@ $(document).ready(function(){
   $('.editableBanner input[type=submit]').click(function(){
     $(this).val('Saving...');
     var data={};
-    $('[name^=editable]').each(function(){
+    $('[name^=editable_]').each(function(){
       var name = $(this).attr('name').replace("editable_", "")
 
       var namesplit = $(this).attr('name').replace("editable_", "").split(/_(.+)?/)
@@ -143,11 +143,27 @@ $(document).ready(function(){
       });
     });
 
+    data['education']=[]
+    $('.editableEducation .editableEducationRow').each(function(){
+      temp = {}
+      temp.id = $(this).data('editable-education-id');
+      temp.uniqueId = $(this).data('uniqueId');
+      temp.action = $(this).data('editable-education-action');
+      $(this).find('.editableEducationItem [name^=editableEduaction_]').each(function(){
+        var name = $(this).attr('name').replace("editableEduaction_", "")
+        temp[name] = $(this).val();
+      });
+      data['education'].push(temp);
+    });
+
     console.log(data);
 
     $.post('request/editable.php',data,function(data){
-      switch (parseInt(data)) {
-        case 1: //Good
+      console.log(data);
+      data = JSON.parse(data);
+      console.log(data.status);
+      switch (data.status) {
+        case 'success': //Good
           $('.editableBanner input[type=submit]').val('Save');
           swal({
             title: "Saved!",
@@ -159,6 +175,19 @@ $(document).ready(function(){
           });
           $('.icon:not(.socialEditable-plus)').each(function(){
             $(this).data('action','');
+          });
+          $('.editableEducation .editableEducationRow').each(function(){
+            if($(this).data('editable-education-action') == 'new'){
+              console.log($(this).data('uniqueId'), data.education[$(this).data('uniqueId')].id)
+              $(this).data('editable-education-id', data.education[$(this).data('uniqueId')].id);
+              console.log($(this).data('editable-education-id'));
+
+              $(this).data('editable-education-action','');
+            }
+            if($(this).data('editable-education-action') == 'remove'){
+              if(data.education[$(this).data('uniqueId')].action == 'remove');
+              $(this).remove();
+            }
           });
 
           break;

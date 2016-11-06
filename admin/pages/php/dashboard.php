@@ -8,6 +8,7 @@ $Page = new PageAdmin(array(
 				'plugins/autosize/jquery.autosize.min.js',
 				'plugins/Autolinker/Autolinker.min.js',
         'js/dashboard.js',
+        'js/editableEducation.js',
 				'plugins/sweetalert/sweetalert.css',
   )
 ));

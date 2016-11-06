@@ -57,6 +57,26 @@ z-index: 99999999;
   bottom: 0px;
   background: rgba(0, 0, 0, 0.75);
 }
+.editableEducationRow{
+  position: relative;
+}
+.editableEducationItem input{
+  display: inline-block;
+}
+.hidden{
+  display:none;
+}
+.linkAdd, .linkSupp:hover{
+      color: #e3ae76 !important;
+      cursor: pointer;
+}
+.linkSupp, .linkSupp:hover{
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      text-decoration: none;
+      border: 0px
+}
 @media screen and (max-width: 831px){
 .editableBanner{
   padding: 1em 1em 1em 1em;
