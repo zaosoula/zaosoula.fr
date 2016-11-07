@@ -125,6 +125,7 @@ class Resume {
 
         foreach ( $res as $row ) {
         	$this->work[] = array(
+        	"id"=>$row['id'],
         	"company"=>$row['company'],
         	"startDate"=>$row['startDate'],
         	"endDate"=>$row['endDate'],

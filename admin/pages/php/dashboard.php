@@ -9,6 +9,7 @@ $Page = new PageAdmin(array(
 				'plugins/Autolinker/Autolinker.min.js',
         'js/dashboard.js',
         'js/editableEducation.js',
+        'js/editableWork.js',
 				'plugins/sweetalert/sweetalert.css',
   )
 ));

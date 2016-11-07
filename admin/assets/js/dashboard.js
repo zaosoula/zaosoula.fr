@@ -156,6 +156,19 @@ $(document).ready(function(){
       data['education'].push(temp);
     });
 
+    data['work']=[]
+    $('.editableWork .editableWorkRow').each(function(){
+      temp = {}
+      temp.id = $(this).data('editable-work-id');
+      temp.uniqueId = $(this).data('uniqueId');
+      temp.action = $(this).data('editable-work-action');
+      $(this).find('.editableWorkItem [name^=editableWork_]').each(function(){
+        var name = $(this).attr('name').replace("editableWork_", "")
+        temp[name] = $(this).val();
+      });
+      data['work'].push(temp);
+    });
+
     console.log(data);
 
     $.post('request/editable.php',data,function(data){
@@ -186,6 +199,19 @@ $(document).ready(function(){
             }
             if($(this).data('editable-education-action') == 'remove'){
               if(data.education[$(this).data('uniqueId')].action == 'remove');
+              $(this).remove();
+            }
+          });
+          $('.editableWork .editableWorkRow').each(function(){
+            if($(this).data('editable-work-action') == 'new'){
+              console.log($(this).data('uniqueId'), data.work[$(this).data('uniqueId')].id)
+              $(this).data('editable-work-id', data.work[$(this).data('uniqueId')].id);
+              console.log($(this).data('editable-work-id'));
+
+              $(this).data('editable-work-action','');
+            }
+            if($(this).data('editable-work-action') == 'remove'){
+              if(data.work[$(this).data('uniqueId')].action == 'remove');
               $(this).remove();
             }
           });

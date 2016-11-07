@@ -57,10 +57,10 @@ z-index: 99999999;
   bottom: 0px;
   background: rgba(0, 0, 0, 0.75);
 }
-.editableEducationRow{
+.editableEducationRow, .editableWorkRow{
   position: relative;
 }
-.editableEducationItem input{
+.editableEducationItem input,.editableWorkItem input{
   display: inline-block;
 }
 .hidden{

@@ -171,7 +171,88 @@ class ResumeUpdater extends Resume
      }
 
   }
-  $return['status'] = 'success';
-  return $return;
+
+/// WORK //////
+ foreach($this->work as $key => $valeur)
+ {
+   if($valeur['action'] == 'new'){
+     try{
+       $sql = "INSERT INTO `work`(`company`, `startDate`, `endDate`, `location`, `website`, `position`, `summary`) VALUES
+       (:Company,:StartDate,:EndDate, :Location, :Website, :Position, :Summary)";
+       $pdo = Connexion::getInstance ();
+       $sth = $pdo->prepare ( $sql );
+       $sth->bindParam ( ':Company',  $valeur['company'], PDO::PARAM_STR);
+       $sth->bindParam ( ':StartDate',  $valeur['startDate'], PDO::PARAM_STR);
+       $sth->bindParam ( ':EndDate',  $valeur['endDate'], PDO::PARAM_STR);
+       $sth->bindParam ( ':Location',  $valeur['location'], PDO::PARAM_STR);
+       $sth->bindParam ( ':Website',  $valeur['website'], PDO::PARAM_STR);
+       $sth->bindParam ( ':Position',  $valeur['position'], PDO::PARAM_STR);
+       $sth->bindParam ( ':Summary',  $valeur['summary'], PDO::PARAM_STR);
+       $sth->execute();
+       $return['work'][$valeur['uniqueId']] = array(
+         'id' => $pdo->lastInsertId(),
+       );
+         logger("ResumeUpdater create : \"".$valeur['company'].":".$valeur['position']."\"  à été ajouté");
+     } catch ( PDOException $e ) {
+         logger('ResumeUpdater create Error - PDOException : '.json_encode($e)); //Add in log
+     }
+   }elseif($valeur['action'] == 'remove'){
+     try{
+       $sql = "DELETE FROM `work` WHERE `id` = :Id";
+       $pdo = Connexion::getInstance ();
+       $sth = $pdo->prepare ( $sql );
+       $sth->bindParam ( ':Id',  $valeur['id'], PDO::PARAM_INT);
+       $sth->execute();
+       $return['work'][$valeur['uniqueId']] = array(
+         'action' => 'remove',
+       );
+         logger("ResumeUpdater delete : work  id/".$valeur['id']." à été remove");
+     } catch ( PDOException $e ) {
+         logger('ResumeUpdater delete Error - PDOException : '.json_encode($e)); //Add in log
+     }
+   }elseif(!empty($valeur['id'])){
+
+     foreach($data->work as $dataKey => $dataValeur)
+     {
+       if($dataValeur['id'] == $valeur['id']){
+         logger('Match for work id/'.$valeur['id']); //Add in log
+         $updateNeed = false;
+         foreach($dataValeur as $dataValeurKey => $dataValeurValeur)
+         {
+           if($dataValeurValeur != $valeur[$dataValeurKey]){
+             logger('Update need for work id/'.$dataValeur['id'] .'because '.$dataValeurKey.' : '.$dataValeurValeur.' != '.$valeur[$dataValeurKey]); //Add in log
+             $updateNeed = true;
+           }
+         }
+
+         if($updateNeed === true){
+           try{
+             $sql = "UPDATE `work` SET `company`=:Company,`startDate`=:StartDate,`endDate`=:EndDate,`location`=:Location,`website`=:Website,`position`=:Position,`summary`=:Summary WHERE `id`= :Id";
+             $pdo = Connexion::getInstance ();
+             $sth = $pdo->prepare ( $sql );
+             $sth->bindParam ( ':Id',  $valeur['id'], PDO::PARAM_STR);
+             $sth->bindParam ( ':Company',  $valeur['company'], PDO::PARAM_STR);
+             $sth->bindParam ( ':StartDate',  $valeur['startDate'], PDO::PARAM_STR);
+             $sth->bindParam ( ':EndDate',  $valeur['endDate'], PDO::PARAM_STR);
+             $sth->bindParam ( ':Location',  $valeur['location'], PDO::PARAM_STR);
+             $sth->bindParam ( ':Website',  $valeur['website'], PDO::PARAM_STR);
+             $sth->bindParam ( ':Position',  $valeur['position'], PDO::PARAM_STR);
+             $sth->bindParam ( ':Summary',  $valeur['summary'], PDO::PARAM_STR);
+             $sth->execute();
+               logger("ResumeUpdater Update : work id/".$dataValeur['id']." updated");
+           } catch ( PDOException $e ) {
+               logger('ResumeUpdater Update Error - PDOException : '.json_encode($e)); //Add in log
+           }
+         }
+
+
+       }
+     }
+
+   }
+
+}
+$return['status'] = 'success';
+return $return;
 }
 }
