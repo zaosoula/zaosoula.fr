@@ -50,7 +50,7 @@
 <?
     require_once('pages/html/'.$pageName.'.php'); //Load the html file of page
   ?>
-
+<a href="http://www.beyondsecurity.com/vulnerability-scanner-verification/zaosoula.fr"><img src="https://seal.beyondsecurity.com/verification-images/zaosoula.fr/vulnerability-scanner-2.gif" alt="Website Security Test" border="0" /></a>
   		<!-- Scripts -->
   			<script src="<?echo BaseUrl?>/assets/js/jquery.min.js" ></script>
   			<script src="<?echo BaseUrl?>/assets/js/jquery.scrollex.min.js" ></script>
