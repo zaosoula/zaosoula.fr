@@ -19,7 +19,7 @@
    logger('Get Auth Info Error - PDOException : '.json_encode($e)); //Add in log
  }
 if(!empty($auth_info['auth_username']) && !empty($auth_info['auth_password'])){
-   if($auth_info['auth_username'] == $sPOST['username'] && $auth_info['auth_password']  == sha1($sPOST['password'])){
+   if($auth_info['auth_username'] == $sPOST['username'] && password_verify($sPOST['password'], $auth_info['auth_password']) == true){
      $_SESSION['user'] = array(
        "status"=>"auth",
        "username"=>$sPOST['username']
