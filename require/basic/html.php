@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Zao Soula">
 
-    <meta name="description" content="Je m'appelle Zao Soula, j'ai <?echo date(Y)-2002?> ans et je suis passionné d'informatique et d'électronique. Depuis maintenant <?echo date(Y)-2012?> ans je pratique le développement web, et maitrise aujourd'hui l'HTML, le PHP, le CSS et le Javascript.">
+    <meta name="description" content="Je m'appelle Zao Soula, j'ai <?echo date('Y')-2002?> ans et je suis passionné d'informatique et d'électronique. Depuis maintenant <?echo date('Y')-2012?> ans je pratique le développement web, et maitrise aujourd'hui l'HTML, le PHP, le CSS et le Javascript.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title><?echo $Page->getTitle();?></title>
 
@@ -27,14 +27,14 @@
     <meta name="twitter:site" content="@zarque7">
     <meta name="twitter:creator" content="@zarque7">
     <meta name="twitter:title" content="Zao Soula - Développeur Web">
-    <meta name="twitter:description" content="Je m'appelle Zao Soula, j'ai <?echo date(Y)-2002?> ans et je suis passionné d'informatique et d'électronique. Depuis maintenant <?echo date(Y)-2012?> ans je pratique le développement web, et maitrise aujourd'hui l'HTML, le PHP, le CSS et le Javascript.">
+    <meta name="twitter:description" content="Je m'appelle Zao Soula, j'ai <?echo date('Y')-2002?> ans et je suis passionné d'informatique et d'électronique. Depuis maintenant <?echo date('Y')-2012?> ans je pratique le développement web, et maitrise aujourd'hui l'HTML, le PHP, le CSS et le Javascript.">
     <meta name="twitter:image" content="https://zaosoula.fr/assets/images/screen.png">
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Zao Soula - Développeur Web">
     <meta property="og:url" content="https://zaosoula.fr/">
     <meta property="og:image" content="https://zaosoula.fr/assets/images/screen.png">
-    <meta property="og:description" content="Je m'appelle Zao Soula, j'ai <?echo date(Y)-2002?> ans et je suis passionné d'informatique et d'électronique. Depuis maintenant <?echo date(Y)-2012?> ans je pratique le développement web, et maitrise aujourd'hui l'HTML, le PHP, le CSS et le Javascript.">
+    <meta property="og:description" content="Je m'appelle Zao Soula, j'ai <?echo date('Y')-2002?> ans et je suis passionné d'informatique et d'électronique. Depuis maintenant <?echo date('Y')-2012?> ans je pratique le développement web, et maitrise aujourd'hui l'HTML, le PHP, le CSS et le Javascript.">
 
 
 
@@ -70,6 +70,7 @@
           ga('send', 'pageview');
 
         </script>
+        <div style="display:none"><a href="http://www.beyondsecurity.com/vulnerability-scanner-verification/zaosoula.fr"><img src="https://seal.beyondsecurity.com/verification-images/zaosoula.fr/vulnerability-scanner-2.gif" alt="Website Security Test" border="0" /></a></div>
 <?
   $Page->load(); //Load all assets (set in php file of page)
 ?>
