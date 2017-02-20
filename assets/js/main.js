@@ -141,3 +141,31 @@ particlesJS.load('particles-js', 'configs/particles.json');
 	});
 
 })(jQuery);
+
+var DontForgetMe = (function () {
+	"use strict";
+
+	var title = document.title;
+
+	function _changeTitle() {
+		document.addEventListener('visibilitychange', function () {
+			if (document.hidden) {
+				console.log('Page not show, stop particles');
+    			pJSDom[0].pJS.particles.move.enable = false;
+			} else {
+				console.log('Page  show, start particles');
+		    pJSDom[0].pJS.particles.move.enable = true;
+		    pJSDom[0].pJS.fn.particlesRefresh();
+			}
+		})
+	}
+
+	function init() {
+		_changeTitle();
+	}
+
+	return {
+		init: init
+	}
+})()
+DontForgetMe.init();
