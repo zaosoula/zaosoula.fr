@@ -192,6 +192,7 @@ class Resume {
 
       	foreach ( $res as $row ) {
         	$this->projects[] = array(
+          	"id"=>$row['id'],
           	"name"=>$row['name'],
           	"summary"=>$row['summary'],
           	"picture"=>$row['picture'],

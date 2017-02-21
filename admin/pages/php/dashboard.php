@@ -10,9 +10,11 @@ $Page = new PageAdmin(array(
         'js/dashboard.js',
         'js/editableEducation.js',
         'js/editableWork.js',
+				'js/editableProjects.js',
 				'plugins/sweetalert/sweetalert.css',
   )
 ));
+
 if(!$Page->checkRights('login'))
 	header('Location: login');
 

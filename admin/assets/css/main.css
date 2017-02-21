@@ -15,6 +15,9 @@
     height: auto !important;
     text-align: inherit !important;
     padding:0px !important;
+    color: inherit !important;
+    font: inherit !important;
+    text-decoration: inherit !important;
 }
 
 .editableTextarea {
@@ -60,7 +63,7 @@ z-index: 99999999;
 .editableEducationRow, .editableWorkRow{
   position: relative;
 }
-.editableEducationItem input,.editableWorkItem input{
+.editableEducationItem input,.editableWorkItem input,.editableProjectsItem input{
   display: inline-block;
 }
 .hidden{
@@ -96,4 +99,9 @@ z-index: 99999999;
 .editableBanner .actions li input{
   width: 100% !important;
 }
+}
+.project .content.active .overlay{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
