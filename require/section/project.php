@@ -9,7 +9,7 @@ if(!empty($resume->projects)){
 		<div class="row uniform projects">
 				<?
 						foreach($resume->projects as $key => $value){
-								echo '<div class="project 4u 12u$(medium)"><div class="content" style=\'background-image: url("'.BaseUrl.'/assets/images/projects/'.$value['picture'].'")\'>';
+								echo '<div class="project 4u 12u$(medium)"><div class="content" style=\'background-image: url("'.$value['picture'].'")\'>';
 								if($value['url'])
 									echo '<a href="'.$value['url'].'" target="_blank">';
 								echo '<div class="overlay">
