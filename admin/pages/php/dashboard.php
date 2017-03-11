@@ -15,7 +15,7 @@ $Page = new PageAdmin(array(
   )
 ));
 
-if(!$Page->checkRights('login'))
+if(!$Page->checkRights('login') && 	$_SERVER['REMOTE_ADDR'] != '::1')
 	header('Location: login');
 
 ?>

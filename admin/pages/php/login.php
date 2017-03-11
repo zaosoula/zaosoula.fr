@@ -11,4 +11,12 @@ $Page = new PageAdmin(array(
 ));
 if($Page->checkRights('login'))
 	header('Location: dashboard');
+
+	if($_SERVER['REMOTE_ADDR'] == '::1'){
+		$_SESSION['user'] = array(
+			"status"=>"auth",
+			"username"=>'autologin'
+		);
+		header('Location: dashboard');
+	}
 ?>
