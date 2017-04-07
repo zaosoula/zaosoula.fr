@@ -54,7 +54,7 @@ $(document).ready(function(){
       $(this).parent().find('.row div:'+pos+' ul').append($('.editableSkillTemplate').html()).parent().find('.editableSkillRow:last').uniqueId().makeEditabelSkill().hide().slideDown().find('.ability-score').append(' <a class="editableSkillSupp"><i class="fa fa-trash"></i></a>').find('.editableSkillSupp').click(function(){
         console.log($(this).parent().parent().data('editable-skill-action'));
         if($(this).parent().parent().data('editable-skill-action') == 'new'){
-          $(this).parent().parent().slideUp(function(){$('this').remove()});
+          $(this).parent().parent().slideUp(function(){$(this).remove()});
         }else{
           $(this).parent().parent().slideUp().data('editable-skill-action', 'remove');
         }
@@ -68,7 +68,7 @@ $(document).ready(function(){
     $(this).uniqueId().find('.ability-score').append(' <a class="editableSkillSupp"><i class="fa fa-trash"></i></a>').find('.editableSkillSupp').click(function(){
       console.log($(this).parent().parent().data('editable-skill-action'));
       if($(this).parent().parent().data('editable-skill-action') == 'new'){
-        $(this).parent().parent().slideUp(function(){$('this').remove()});
+        $(this).parent().parent().slideUp(function(){$(this).remove()});
       }else{
         $(this).parent().parent().slideUp().data('editable-skill-action', 'remove');
       }

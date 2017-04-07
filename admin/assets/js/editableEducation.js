@@ -33,7 +33,7 @@ $(document).ready(function(){
     $(this).uniqueId().append('<a class="editableEducationSupp linkSupp"><i class="fa fa-trash"></i></a>').find('.editableEducationSupp').click(function(){
       console.log($(this).parent().data('editable-education-action'));
       if($(this).parent().data('editable-education-action') == 'new'){
-        $(this).parent().slideUp(function(){$('this').remove()});
+        $(this).parent().slideUp(function(){$(this).remove()});
       }else{
         $(this).parent().slideUp().data('editable-education-action', 'remove');
       }
