@@ -378,7 +378,7 @@ class ResumeUpdater extends Resume
 
          if($updateNeed === true){
            try{
-             $sql = "UPDATE `skills` SET ``name`=:Name,`level`=:Level  WHERE `id`= :Id";
+             $sql = "UPDATE `skills` SET `name`=:Name,`level`=:Level  WHERE `id`= :Id";
              $pdo = Connexion::getInstance ();
              $sth = $pdo->prepare ( $sql );
              $sth->bindParam ( ':Id',  $valeur['id'], PDO::PARAM_INT);
