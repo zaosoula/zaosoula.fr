@@ -151,6 +151,7 @@ class Resume {
 
         foreach ( $res as $row ) {
           $this->skills[] = array(
+            "id"=>$row['id'],
             "name"=>$row['name'],
             "level"=>$row['level']
           );

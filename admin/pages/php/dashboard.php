@@ -7,10 +7,12 @@ $Page = new PageAdmin(array(
 				'plugins/sweetalert/sweetalert.min.js',
 				'plugins/autosize/jquery.autosize.min.js',
 				'plugins/Autolinker/Autolinker.min.js',
+				'plugins/raty-fa/jquery.raty-fa.js',
         'js/dashboard.js',
         'js/editableEducation.js',
         'js/editableWork.js',
 				'js/editableProjects.js',
+				'js/editableSkills.js',
 				'plugins/sweetalert/sweetalert.css',
   )
 ));
