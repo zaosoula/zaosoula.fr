@@ -196,6 +196,19 @@ $(document).ready(function() {
             });
             data['skills'].push(temp);
         });
+
+        data['languages'] = []
+        $('.editableLang .editableLangRow').each(function() {
+            temp = {}
+            temp.id = $(this).data('editable-lang-id');
+            temp.uniqueId = $(this).data('uniqueId');
+            temp.action = $(this).data('editable-lang-action');
+            $(this).find('.editableLangItem [name^=editableLang_]').each(function() {
+                var name = $(this).attr('name').replace("editableLang_", "")
+                temp[name] = $(this).val();
+            });
+            data['languages'].push(temp);
+        });
         console.log(data);
 
         $.post('request/editable.php', data, function(data) {
@@ -267,6 +280,20 @@ $(document).ready(function() {
                         }
                         if ($(this).data('editable-skill-action') == 'remove') {
                             if (data.skills[$(this).data('uniqueId')].action == 'remove');
+                            $(this).remove();
+                        }
+                    });
+
+                    $('.editableLang .editableLangRow').each(function() {
+                        if ($(this).data('editable-lang-action') == 'new') {
+                            console.log($(this).data('uniqueId'), data.languages[$(this).data('uniqueId')].id)
+                            $(this).data('editable-lang-id', data.languages[$(this).data('uniqueId')].id);
+                            console.log($(this).data('editable-lang-id'));
+
+                            $(this).data('editable-lang-action', '');
+                        }
+                        if ($(this).data('editable-lang-action') == 'remove') {
+                            if (data.languages[$(this).data('uniqueId')].action == 'remove');
                             $(this).remove();
                         }
                     });

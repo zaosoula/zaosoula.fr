@@ -106,6 +106,7 @@ class Resume {
 
         foreach ( $res as $row ) {
           $this->languages[] = array(
+            "id"=>$row['id'],
             "name"=>$row['name'],
             "level"=>$row['level']
           );
