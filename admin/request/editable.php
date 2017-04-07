@@ -18,12 +18,10 @@
 
 
  $Page = new PageAdmin();
- if(!$Page->checkRights('login')){
+ if(!$Page->checkRights('login') && $_SERVER['REMOTE_ADDR'] != '::1'){
  	exit();
 }
 $ResumeUpdater = new ResumeUpdater(textareaConvert($_POST));
 $Resume = new Resume('loadBDD');
 echo json_encode($ResumeUpdater->update($Resume));
-
-
 ?>
