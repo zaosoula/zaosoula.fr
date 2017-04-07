@@ -209,6 +209,19 @@ $(document).ready(function() {
             });
             data['languages'].push(temp);
         });
+
+        data['tools'] = []
+        $('.editableTools .editableToolsRow').each(function() {
+            temp = {}
+            temp.id = $(this).data('editable-tools-id');
+            temp.uniqueId = $(this).data('uniqueId');
+            temp.action = $(this).data('editable-tools-action');
+            $(this).find('.editableToolsItem [name^=editableTools_]').each(function() {
+                var name = $(this).attr('name').replace("editableTools_", "")
+                temp[name] = $(this).val();
+            });
+            data['tools'].push(temp);
+        });
         console.log(data);
 
         $.post('request/editable.php', data, function(data) {
@@ -294,6 +307,20 @@ $(document).ready(function() {
                         }
                         if ($(this).data('editable-lang-action') == 'remove') {
                             if (data.languages[$(this).data('uniqueId')].action == 'remove');
+                            $(this).remove();
+                        }
+                    });
+
+                    $('.editableTools .editableToolsRow').each(function() {
+                        if ($(this).data('editable-tools-action') == 'new') {
+                            console.log($(this).data('uniqueId'), data.tools[$(this).data('uniqueId')].id)
+                            $(this).data('editable-tools-id', data.tools[$(this).data('uniqueId')].id);
+                            console.log($(this).data('editable-tools-id'));
+
+                            $(this).data('editable-tools-action', '');
+                        }
+                        if ($(this).data('editable-tools-action') == 'remove') {
+                            if (data.tools[$(this).data('uniqueId')].action == 'remove');
                             $(this).remove();
                         }
                     });

@@ -468,6 +468,76 @@ class ResumeUpdater extends Resume
    }
 
 }
+
+/// Tools //////
+ foreach($this->tools as $key => $valeur)
+ {
+   if(!empty($valeur['action']) && $valeur['action'] == 'new'){
+     try{
+       $sql = "INSERT INTO `tools`(`name`, `level`) VALUES (:Name, :Level)";
+       $pdo = Connexion::getInstance ();
+       $sth = $pdo->prepare ( $sql );
+       $sth->bindParam ( ':Name',  $valeur['name'], PDO::PARAM_STR);
+       $sth->bindParam ( ':Level',  $valeur['level'], PDO::PARAM_INT);
+       $sth->execute();
+       $return['tools'][$valeur['uniqueId']] = array(
+         'id' => $pdo->lastInsertId(),
+       );
+         logger("ResumeUpdater create : \"".$valeur['name'].":".$valeur['level']."\"  à été ajouté");
+     } catch ( PDOException $e ) {
+         logger('ResumeUpdater create Error - PDOException : '.json_encode($e)); //Add in log
+     }
+   }elseif(!empty($valeur['action']) && $valeur['action'] == 'remove'){
+     try{
+       $sql = "DELETE FROM `tools` WHERE `id` = :Id";
+       $pdo = Connexion::getInstance ();
+       $sth = $pdo->prepare ( $sql );
+       $sth->bindParam ( ':Id',  $valeur['id'], PDO::PARAM_INT);
+       $sth->execute();
+       $return['tools'][$valeur['uniqueId']] = array(
+         'action' => 'remove',
+       );
+         logger("ResumeUpdater delete : tools  id/".$valeur['id']." à été remove");
+     } catch ( PDOException $e ) {
+         logger('ResumeUpdater delete Error - PDOException : '.json_encode($e)); //Add in log
+     }
+   }elseif(!empty($valeur['id'])){
+
+     foreach($data->tools as $dataKey => $dataValeur)
+     {
+       if($dataValeur['id'] == $valeur['id']){
+         logger('Match for tools id/'.$valeur['id']); //Add in log
+         $updateNeed = false;
+         foreach($dataValeur as $dataValeurKey => $dataValeurValeur)
+         {
+           if(!empty($valeur[$dataValeurKey]) && $dataValeurValeur != $valeur[$dataValeurKey]){
+             logger('Update need for tools id/'.$dataValeur['id'] .'because '.$dataValeurKey.' : '.$dataValeurValeur.' != '.$valeur[$dataValeurKey]); //Add in log
+             $updateNeed = true;
+           }
+         }
+
+         if($updateNeed === true){
+           try{
+             $sql = "UPDATE `tools` SET `name`=:Name,`level`=:Level  WHERE `id`= :Id";
+             $pdo = Connexion::getInstance ();
+             $sth = $pdo->prepare ( $sql );
+             $sth->bindParam ( ':Id',  $valeur['id'], PDO::PARAM_INT);
+             $sth->bindParam ( ':Name',  $valeur['name'], PDO::PARAM_STR);
+             $sth->bindParam ( ':Level',  $valeur['level'], PDO::PARAM_INT);
+             $sth->execute();
+               logger("ResumeUpdater Update : tools id/".$dataValeur['id']." updated");
+           } catch ( PDOException $e ) {
+               logger('ResumeUpdater Update Error - PDOException : '.json_encode($e)); //Add in log
+           }
+         }
+
+
+       }
+     }
+
+   }
+
+}
 $return['status'] = 'success';
 return $return;
 }

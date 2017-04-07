@@ -216,6 +216,7 @@ class Resume {
 
         foreach ( $res as $row ) {
           $this->tools[] = array(
+            "id"=>$row['id'],
             "name"=>$row['name'],
             "level"=>$row['level'],
           );

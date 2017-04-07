@@ -105,6 +105,6 @@ z-index: 99999999;
 	flex-direction: column;
 	justify-content: center;
 }
-.editableSkillSupp, .editableLangSupp{
+.editableSkillSupp, .editableLangSupp, .editableToolsSupp{
   float: right;
 }

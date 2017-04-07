@@ -14,6 +14,7 @@ $Page = new PageAdmin(array(
 				'js/editableProjects.js',
 				'js/editableSkills.js',
 				'js/editableLang.js',
+				'js/editableTools.js',
 				'plugins/sweetalert/sweetalert.css',
   )
 ));
