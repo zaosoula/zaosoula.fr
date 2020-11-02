@@ -1,3 +1,0 @@
-<?
-    require('../configs/config.php');
-?>
