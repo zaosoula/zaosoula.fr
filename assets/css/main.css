@@ -1,0 +1,145 @@
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+  font-family: 'Inconsolata', monospace;
+  color: #000000;
+}
+
+.container {
+  position: relative;
+}
+
+.header {
+  padding: 0 80px;
+}
+
+.pure-menu {
+  margin-top: 30px;
+  position: absolute;
+  display: inline;
+  width: auto;
+}
+
+.pure-menu-heading {
+  text-transform: none;
+  color: #000000;
+} 
+
+.pure-menu-spacer {
+  width: 40px;
+  display: inline-block;
+  border: .5px solid #707070;
+  vertical-align: middle;
+}
+
+.intro-left, .intro-right {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.intro-left {
+  background-color: #ffffff;
+}
+
+.intro-left .social-menu {
+  margin-top: 0;
+  margin-left: 20px;
+  transition: all .5s;
+}
+
+.intro-left .intro-content {
+  align-self: center;
+  width: 50%;
+}
+
+.intro-left .intro-content h1 {
+  font-weight: 400;
+  font-size: 55px;
+}
+
+.intro-left .intro-content h1 span {
+  position: relative;
+  z-index: 1;
+}
+
+.intro-left .intro-content h1 span:after {
+  position: absolute;
+  content:'';
+  height: 25px;
+  width: 100%;
+  background-color: #f1c40f;
+  opacity: .45;
+  left: 0;
+  bottom: -2px;
+  z-index: -1;
+}
+
+.intro-left .intro-content p {
+  font-family: 'Lato', sans-serif;
+  line-height: 150%;
+  margin-bottom: 75px;
+}
+
+.intro-left .intro-content a, .intro-left .intro-content a:hover, .intro-left .intro-content a:focus {
+  text-decoration: none;
+  color: #000000;
+  fill: #000000;
+}
+
+
+.intro-left .social-menu:not(.pure-menu-horizontal) .pure-menu-item:not(:last-child){
+ margin-bottom: 30px;
+}
+
+.intro-left .social-menu svg{
+ width: 25px;
+}
+
+.intro-right {
+  background: url(../images/bg.png), linear-gradient(0deg, #f1c40f, #f1c40f);
+  transition: all .5s;
+}
+
+.intro-right .pure-img{
+  height: 100%;
+  max-height: 50vh;
+  max-width: 100%;
+  align-self: flex-start;
+  transform: translateX(-50%);
+  transition: all .5s;
+}
+
+.intro-left .social-menu-xs {
+  visibility: none;
+  opacity: 0;
+  display: inline;
+}
+
+@media screen and (max-width: 80em) {
+  .intro-right .pure-img{
+    transform: translateX(-25%);
+  }
+}
+
+@media screen and (max-width: 64em) {
+  .intro-left .social-menu-md {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .intro-left .social-menu-xs {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .intro-right {
+    visibility: hidden;
+    opacity: 0;
+    height: 0px;
+  }
+
+  .header{
+    visibility: hidden;
+    opacity: 0;
+  }
+}
