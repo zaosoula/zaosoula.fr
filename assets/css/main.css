@@ -113,6 +113,9 @@ html, button, input, select, textarea,
   visibility: none;
   opacity: 0;
   display: inline;
+  margin-left: auto;
+  margin-right: auto;
+  position: static;
 }
 
 @media screen and (max-width: 80em) {
@@ -122,14 +125,23 @@ html, button, input, select, textarea,
 }
 
 @media screen and (max-width: 64em) {
+
+  .intro-left .intro-content {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+  }
+
   .intro-left .social-menu-md {
     visibility: hidden;
     opacity: 0;
+    display: none;
   }
 
   .intro-left .social-menu-xs {
     visibility: visible;
     opacity: 1;
+    justify-self: center;
   }
 
   .intro-right {
@@ -142,4 +154,6 @@ html, button, input, select, textarea,
     visibility: hidden;
     opacity: 0;
   }
+
+
 }
