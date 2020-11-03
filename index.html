@@ -17,21 +17,21 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container-fluid">
     <div class="header">
       <div class="pure-menu pure-menu-horizontal">
         <a class="pure-menu-heading" href="">Zao Soula</a>
-        <!--<hr class="pure-menu-spacer" />
+        <hr class="pure-menu-spacer" />
         <ul class="pure-menu-list">
           <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
-          <li class="pure-menu-item"><a href="#" class="pure-menu-link">About</a></li>
-          <li class="pure-menu-item"><a href="#" class="pure-menu-link">Works</a></li>
-          <li class="pure-menu-item"><a href="#" class="pure-menu-link">Resume</a></li>
+          <li class="pure-menu-item"><a data-scroll-to="#about" class="pure-menu-link">About</a></li>
+          <li class="pure-menu-item"><a data-scroll-to="#works" class="pure-menu-link">Photos</a></li>
+          <!--<li class="pure-menu-item"><a href="#" class="pure-menu-link">Resume</a></li>
           <li class="pure-menu-item"><a href="#" class="pure-menu-link">Hire me</a></li>
         </ul>-->
       </div>
     </div>
-    <section class="intro">
+    <section class="intro full">
       <div class="pure-g">
         <div class="pure-u-1 pure-u-lg-2-3 intro-left">
           <div class="pure-menu custom-restricted-width social-menu social-menu-md">
@@ -101,7 +101,7 @@
               </ul>
             </div>
 
-            <!--<a href="#">Scroll Down <svg xmlns="http://www.w3.org/2000/svg" width="6.635" height="9.443"
+            <a data-scroll-to="#about">Scroll Down <svg xmlns="http://www.w3.org/2000/svg" width="6.635" height="9.443"
                 viewBox="0 0 6.635 9.443">
                 <g id="Group_6" data-name="Group 6" transform="translate(-404.217 -700.5)">
                   <path id="chevron_left" data-name="chevron left" d="M3.035,6.07,0,3.035,3.035,0h0"
@@ -109,18 +109,80 @@
                   <line id="Line_8" data-name="Line 8" y2="8.837" transform="translate(407.524 700.5)" fill="none"
                     stroke="#000026" stroke-width="0.8" />
                 </g>
-              </svg></a>-->
+              </svg></a>
 
           </div>
         </div>
-        <div class="pure-u-1 pure-u-lg-1-3 intro-right">
-          <img class="pure-img" src="./assets/images/zao.jpg"
-            srcset="./assets/images/zao@2x.jpg 850w, ./assets/images/zao.jpg 425w" alt="Zao Soula">
+        <div class="pure-u-1 pure-u-lg-1-3 intro-right bg-secondary-w-overlay">
+          <img class="pure-img" src="./assets/images/zao.jpg" alt="Zao Soula">
         </div>
       </div>
     </section>
   </div>
 
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About me</h2>
+      <p class="p-column">
+        Passionate about IT and Science since my younger age, I began learning web development and electronics when I
+        was 10. Today I master technologies like NodeJS, PHP, and many more. Over the years my interest grows as I
+        started doing photography, some articles writing, as well as starting companies. Like a record label where I
+        used my skills in development to automate the distribution process of albums and most of my artist management
+        tasks while learning other aspects of the business like marketing and communication. Since 2020 I following an
+        IT degree at Ynov Toulouse Campus in France, to get a Data Science Master in the next fives years
+      </p>
+    </div>
+  </section>
+
+  <section id="stats" class="stats bg-secondary bg-fixed">
+    <div class="container container-stats">
+      <div class="stats-item">
+        <div class="number" data-limit="15">15</div>
+        <div class="label">Happy Customers</div>
+      </div>
+      <div class="stats-item">
+        <div class="number" data-limit="8">8</div>
+        <div class="label">Years Experience</div>
+      </div>
+      <div class="stats-item">
+        <div class="number" data-limit="2">2</div>
+        <div class="label">Startups</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="works">
+    <div class="container">
+      <h2 class="section-title">Lastest Photos</h2>
+      <p>Besides IT stuffs I also do some photography, here you can see some of my last posts 📷</p>
+      <div class="container-works">
+        <div class="works-col"></div>
+        <div class="works-col"></div>
+        <div class="works-col"></div>
+        <!-- <div class="works-item" style="background-image: url();">
+          <div class="image"><img src="./assets/images/projects/social-media-dashboard.png" class="pure-img" alt="">
+          </div>
+        </div>
+        <div class="works-item" style="background-image: url(./assets/images/projects/social-proof-section.png);"></div>
+        <div class="works-item" style="background-image: url(./assets/images/projects/deezer-public-api.png);"></div>
+        <div class="works-item" style="--aspect-ratio: 1.5;"></div> -->
+      </div>
+
+      <p style="text-align: center;"><a href="https://instagram.com/zaosoula" target="_blank" class="pure-button">See
+          more on Instagram <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="15"
+            style="vertical-align: middle;">
+            <!-- Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+            <path
+              d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+          </svg></a></p>
+
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+
+  <script src="./assets/js/insta.js"></script>
+  <script src="./assets/js/main.js"></script>
 </body>
 
 </html>

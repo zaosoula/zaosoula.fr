@@ -1,11 +1,36 @@
+/*
+  Globals
+*/
+
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"] {
   font-family: 'Inconsolata', monospace;
   color: #000000;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   position: relative;
+}
+
+.container {
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+
+  padding: 104px 32px;
+}
+
+.full {
+  min-height: 100vh;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 400;
 }
 
 .header {
@@ -30,6 +55,34 @@ html, button, input, select, textarea,
   border: .5px solid #707070;
   vertical-align: middle;
 }
+
+.p-column {
+  z-index: 2;
+  -webkit-column-count: 2;
+  column-count: 2;
+  -webkit-column-gap: 56px;
+  column-gap: 56px;
+  -webkit-column-rule-style: none;
+  column-rule-style: none;
+  -webkit-column-rule-width: 0px;
+  column-rule-width: 0px;
+}
+
+.bg-secondary {
+  background-color: #f1c40f;
+}
+.bg-secondary-w-overlay {
+  background: url(../images/bg.png), linear-gradient(0deg, #f1c40f, #f1c40f);
+}
+
+.bg-fixed{
+  background-attachment: fixed;
+}
+
+
+/*
+  Section Intro
+*/
 
 .intro-left, .intro-right {
   height: 100vh;
@@ -96,7 +149,6 @@ html, button, input, select, textarea,
 }
 
 .intro-right {
-  background: url(../images/bg.png), linear-gradient(0deg, #f1c40f, #f1c40f);
   transition: all .5s;
 }
 
@@ -115,7 +167,8 @@ html, button, input, select, textarea,
   display: inline;
   margin-left: auto;
   margin-right: auto;
-  position: static;
+  display: none;
+
 }
 
 @media screen and (max-width: 80em) {
@@ -155,5 +208,81 @@ html, button, input, select, textarea,
     opacity: 0;
   }
 
+}
 
+a[data-scroll-to] {
+  cursor: pointer;
+}
+
+/*
+  Section Stats
+*/
+
+.stats .container-stats {
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+}
+
+.stats .container-stats .stats-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.stats .container-stats .stats-item .number{
+  font-weight: 700;
+  font-size: 48px;
+}
+.stats .container-stats .stats-item .label{
+  font-size: 24px;
+}
+
+/*
+  Section work
+*/
+
+.container-works {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px 30px;
+} 
+
+
+.container-works .works-item {
+  background-color: #f1c40f;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.container-works .works-item .image{
+  position: absolute;
+  padding: 10px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-works .works-item .image img{
+  box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.5)  ;
+  box-shadow: aqua;
+  width: 80%;
+}
+.container-works .works-item::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 0;
+  padding-bottom: calc(100% / (16/9));
+}
+
+.container-works .works-item[style^='--aspect-ratio']::before {
+  padding-bottom: calc(100% / (var(--aspect-ratio)));
 }
