@@ -8,6 +8,10 @@ html, button, input, select, textarea,
   color: #000000;
 }
 
+p {
+  font-family: 'Lato', sans-serif;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -20,8 +24,13 @@ html {
   max-width: 1280px;
   margin-right: auto;
   margin-left: auto;
+  padding: 50px 32px;
+}
 
-  padding: 104px 32px;
+@media screen and (min-width: 35.5em) {
+  .container {
+    padding: 104px 32px;
+  }
 }
 
 .full {
@@ -29,6 +38,7 @@ html {
 }
 
 .section-title {
+  margin-top: 0;
   font-size: 36px;
   font-weight: 400;
 }
@@ -37,14 +47,14 @@ html {
   padding: 0 80px;
 }
 
-.pure-menu {
+.header .pure-menu {
   margin-top: 30px;
   position: absolute;
   display: inline;
   width: auto;
 }
 
-.pure-menu-heading {
+.header .pure-menu-heading {
   text-transform: none;
   color: #000000;
 } 
@@ -58,14 +68,16 @@ html {
 
 .p-column {
   z-index: 2;
-  -webkit-column-count: 2;
-  column-count: 2;
-  -webkit-column-gap: 56px;
-  column-gap: 56px;
-  -webkit-column-rule-style: none;
-  column-rule-style: none;
-  -webkit-column-rule-width: 0px;
-  column-rule-width: 0px;
+}
+
+@media screen and (min-width: 35.5em) {
+  .p-column {
+    z-index: 2;
+    column-count: 2;
+    column-gap: 56px;
+    column-rule-style: none;
+    column-rule-width: 0px;
+  }
 }
 
 .bg-secondary {
@@ -94,8 +106,10 @@ html {
   background-color: #ffffff;
 }
 
-.intro-left .social-menu {
-  margin-top: 0;
+.intro-left .social-menu-md {
+  position: absolute;
+  display: inline;
+  width: auto;
   margin-left: 20px;
   transition: all .5s;
 }
@@ -128,7 +142,6 @@ html {
 }
 
 .intro-left .intro-content p {
-  font-family: 'Lato', sans-serif;
   line-height: 150%;
   margin-bottom: 75px;
 }
@@ -164,10 +177,10 @@ html {
 .intro-left .social-menu-xs {
   visibility: none;
   opacity: 0;
-  display: inline;
   margin-left: auto;
   margin-right: auto;
   display: none;
+  z-index: -1;
 
 }
 
@@ -179,22 +192,39 @@ html {
 
 @media screen and (max-width: 64em) {
 
+  .intro-left .intro-content p {
+    margin-bottom: 25px;
+  }
+
   .intro-left .intro-content {
     width: 75%;
     display: flex;
     flex-direction: column;
   }
 
+  .intro-left .intro-content p{
+    text-align: justify;
+  }
+
   .intro-left .social-menu-md {
     visibility: hidden;
     opacity: 0;
     display: none;
+    z-index: -1;
   }
 
   .intro-left .social-menu-xs {
     visibility: visible;
     opacity: 1;
+    display: flex;
     justify-self: center;
+    z-index: initial;
+    margin-bottom: 25px;
+  }
+  
+  .intro-left .social-menu-xs .pure-menu-list {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .intro-right {
@@ -203,9 +233,18 @@ html {
     height: 0px;
   }
 
-  .header{
-    visibility: hidden;
-    opacity: 0;
+  .header {
+    padding: 0;
+  }
+
+  .header .pure-menu-heading, .header .pure-menu-spacer{
+    display: none;
+  }
+
+  .header .pure-menu-list{
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
   }
 
 }
@@ -219,15 +258,14 @@ a[data-scroll-to] {
 */
 
 .stats .container-stats {
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   color: white;
 }
 
 .stats .container-stats .stats-item {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 .stats .container-stats .stats-item .number{
@@ -235,7 +273,14 @@ a[data-scroll-to] {
   font-size: 48px;
 }
 .stats .container-stats .stats-item .label{
-  font-size: 24px;
+  font-size: 16px;
+  text-align: center;
+}
+
+@media screen and (min-width: 35.5em) {
+  .stats .container-stats .stats-item .label{
+    font-size: 24px;
+  }
 }
 
 /*
@@ -245,8 +290,9 @@ a[data-scroll-to] {
 .container-works {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px 30px;
+  gap: 3px;
 } 
+
 
 
 .container-works .works-item {
@@ -254,8 +300,19 @@ a[data-scroll-to] {
   background-size: cover;
   position: relative;
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 3px;
   cursor: pointer;
+}
+
+@media screen and (min-width: 35.5em) {
+  .container-works {
+    gap: 30px;
+  } 
+
+  .container-works .works-item {
+    margin-bottom: 30px;
+  }
+  
 }
 
 .container-works .works-item .image{
