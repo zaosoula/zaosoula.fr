@@ -7,7 +7,7 @@ function getInstaProfile(username, callback) {
         try {
           var data = xhr.responseText.split("window._sharedData = ")[1].split("<\/script>")[0];
         } catch (error) {
-          console.error("InstagramFeed: It looks like the profile you are trying to fetch is age restricted");
+          console.error("InstagramFeed: It looks like the profile you are trying to fetch is age restricted", error);
           return;
         }
         data = JSON.parse(data.substr(0, data.length - 1));
@@ -23,7 +23,7 @@ function getInstaProfile(username, callback) {
       }
     }
   };
-  xhr.open("GET", 'https://www.instagram.com/' + username + '/', true);
+  xhr.open("GET", 'https://www.instagram.com/' + username + '/?__a=1', true);
   xhr.send();
 };
 
@@ -74,7 +74,7 @@ function getInstaFeed(username, image_sizes_index, callback) {
 
 window.addEventListener('DOMContentLoaded', (event) => {
   getInstaFeed('zaosoula', '640', (data) => {
-    console.log(data);
+    let cols = document.querySelectorAll('.works-col[data-source=insta]')
     data.forEach((post, i) => {
       var postDiv = document.createElement("div");
       postDiv.classList.add('works-item');
@@ -84,7 +84,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         window.open(post.url, '_blank');
       });
 
-      document.querySelectorAll('.works-col')[i % 3].append(postDiv);
+      cols[i % cols.length].append(postDiv);
     })
   });
 });
