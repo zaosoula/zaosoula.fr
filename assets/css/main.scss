@@ -104,12 +104,15 @@ html {
 
 .intro-left, .intro-right {
   height: 100vh;
+  min-height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 .intro-left {
   background-color: #ffffff;
+  // padding-top: ;
 }
 
 .intro-left .social-menu-md {
@@ -197,6 +200,10 @@ html {
 }
 
 @media screen and (max-width: 64em) {
+
+  .intro-left{
+   padding-top: 50px;
+  }
 
   .intro-left .intro-content p {
     margin-bottom: 25px;

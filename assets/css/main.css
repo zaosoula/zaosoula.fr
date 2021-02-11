@@ -107,6 +107,7 @@ html {
 */
 .intro-left, .intro-right {
   height: 100vh;
+  min-height: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -214,6 +215,9 @@ html {
 }
 
 @media screen and (max-width: 64em) {
+  .intro-left {
+    padding-top: 50px;
+  }
   .intro-left .intro-content p {
     margin-bottom: 25px;
   }

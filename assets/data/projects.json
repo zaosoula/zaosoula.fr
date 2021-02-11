@@ -1,4 +1,11 @@
 [
+
+  {
+    "name": "Deezer Public Api",
+    "label": "NodeJS",
+    "link": "https://zaosoula.github.io/deezer-public-api/",
+    "image": "assets/images/projects/deezer-public-api.png"
+  },
   {
     "name": "Domaine de Mestrugue",
     "label": "Website",
@@ -6,9 +13,9 @@
     "image": "assets/images/projects/domaine-de-mestrugue.png"
   },
   {
-    "name": "Deezer Public Api",
-    "label": "NodeJS",
-    "link": "https://zaosoula.github.io/deezer-public-api/",
-    "image": "assets/images/projects/deezer-public-api.png"
+    "name": "Open Mosfet",
+    "label": "Airsoft",
+    "link": "https://github.com/openairsoft/openmosfet",
+    "image": "assets/images/projects/openmosfet.jpg"
   }
 ]
