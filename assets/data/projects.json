@@ -1,5 +1,10 @@
 [
-
+  {
+    "name": "Portfolio - Jade Fillet",
+    "label": "Website",
+    "link": "http://jadefillet.fr",
+    "image": "assets/images/projects/jadefillet.png"
+  },
   {
     "name": "Deezer Public Api",
     "label": "NodeJS",
