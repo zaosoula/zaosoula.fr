@@ -1,4 +1,4 @@
-<?
+<?php  
 if(!empty($resume->basics)){
 ?>
 <!-- Introduction -->
@@ -6,11 +6,11 @@ if(!empty($resume->basics)){
   <div class="spotlight">
     <div class="content">
       <header class="major">
-        <h2><? echo $resume->param['title_intro'];?></h2>
+        <h2><?php   echo $resume->param['title_intro'];?></h2>
       </header>
-      <p><? echo $resume->basics['summary'];?></p>
+      <p><?php   echo $resume->basics['summary'];?></p>
     </div>
-    <span class="hidden-phone image"><img src="<? echo $resume->basics['picture'];?>" alt="<? echo $resume->basics['name'];?>" /></span>
+    <span class="hidden-phone image"><img src="<?php   echo $resume->basics['picture'];?>" alt="<?php   echo $resume->basics['name'];?>" /></span>
   </div>
 </section>
-<?}?>
+<?php   } ?>

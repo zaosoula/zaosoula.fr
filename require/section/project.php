@@ -1,13 +1,13 @@
-<?
+<?php  
 if(!empty($resume->projects)){
 ?>
 <section id="project" class="main special">
 		<header class="major">
-			<h2><? echo $resume->param['title_project'];?></h2>
+			<h2><?php   echo $resume->param['title_project'];?></h2>
 		</header>
 
 		<div class="row uniform projects">
-				<?
+				<?php  
 						foreach($resume->projects as $key => $value){
 								echo '<div class="project 4u 12u$(medium)"><div class="content" style=\'background-image: url("'.$value['picture'].'")\'>';
 								if($value['url'])
@@ -23,4 +23,4 @@ if(!empty($resume->projects)){
 					?>
 			</div>
 	</section>
-<?}?>
+<?php   } ?>

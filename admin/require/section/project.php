@@ -1,11 +1,11 @@
 
 <section id="project" class="main special">
 		<header class="major">
-			<h2 class="editable" data-editable-mode="input" data-editable-name="param_title_project"><? echo $resume->param['title_project'];?></h2>
+			<h2 class="editable" data-editable-mode="input" data-editable-name="param_title_project"><?php   echo $resume->param['title_project'];?></h2>
 		</header>
 
 		<div class="row uniform projects editableProjects">
-				<?
+				<?php  
 						foreach($resume->projects as $key => $value){
 								echo '<div class="project 4u 12u$(medium)" data-editable-project-id="'.$value['id'].'"><div class="content" style=\'background-image: url("'.$value['picture'].'")\'>';
 								if($value['url'])

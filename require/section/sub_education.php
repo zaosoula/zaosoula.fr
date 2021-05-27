@@ -1,6 +1,6 @@
 <div class="experiences">
-  <h2><strong><? echo $resume->param['title_education'];?></strong></h2>
-    <?
+  <h2><strong><?php   echo $resume->param['title_education'];?></strong></h2>
+    <?php  
       foreach($resume->education as $key => $value){
           echo '<div class="experience row">
                   <div class="4u 12u$(medium)">

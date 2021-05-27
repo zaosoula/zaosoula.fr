@@ -1,4 +1,4 @@
-<?
+<?php  
 class PageAdmin extends Page
 {
   private $assets;

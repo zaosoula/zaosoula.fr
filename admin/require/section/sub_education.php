@@ -1,6 +1,6 @@
 <div class="experiences editableEducation">
-  <h2 class="editable" data-editable-mode="input" data-editable-name="param_title_education"><strong><? echo $resume->param['title_education'];?></strong></h2>
-    <?
+  <h2 class="editable" data-editable-mode="input" data-editable-name="param_title_education"><strong><?php   echo $resume->param['title_education'];?></strong></h2>
+    <?php  
     if(!empty($resume->education)){
 
         foreach($resume->education as $key => $value){

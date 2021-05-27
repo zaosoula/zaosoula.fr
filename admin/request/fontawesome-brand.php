@@ -1,4 +1,4 @@
-<?php
+<?php  
 $fa_brand_icons = array(
 	'500px.com'	=> array(
 		'color'		=> '#0099e5',

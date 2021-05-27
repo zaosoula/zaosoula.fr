@@ -1,4 +1,4 @@
-<?
+<?php  
 function logger($message){
   $debug_backtrace = debug_backtrace();
   $error = '['.date("Y-m-d H:i:s").'] "'.$message.'" in '.$debug_backtrace[0]['file'].' line '.$debug_backtrace[0]['line'];

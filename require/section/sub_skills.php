@@ -1,8 +1,8 @@
 <div class="abilities">
-  <h2><strong><? echo $resume->param['title_skills'];?></strong></h2>
+  <h2><strong><?php   echo $resume->param['title_skills'];?></strong></h2>
 
   <div class="row">
-    <?
+    <?php  
         foreach($resume->skills as $key => $value){
           if($key === 0){
             echo '<div class="6u 12u$(medium)"><ul class="no-bullets">';

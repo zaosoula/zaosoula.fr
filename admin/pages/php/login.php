@@ -1,4 +1,4 @@
-<?
+<?php  
 $resume = new Resume('loadBDD');
 
 $Page = new PageAdmin(array(

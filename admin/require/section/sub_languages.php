@@ -1,8 +1,8 @@
 <div class="abilities editableLang">
-<h2 class="editable" data-editable-mode="input" data-editable-name="param_title_language"><strong><? echo $resume->param['title_language'];?></strong></h2>
+<h2 class="editable" data-editable-mode="input" data-editable-name="param_title_language"><strong><?php   echo $resume->param['title_language'];?></strong></h2>
 <div class="row">
 
-  <?
+  <?php  
           foreach($resume->languages as $key => $value){
             if($key === 0){
               echo '<div class="6u 12u$(medium)"><ul class="no-bullets">';

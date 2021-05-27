@@ -1,15 +1,15 @@
 <!-- Wrapper -->
 <div id="wrapper">
-  <?
+  <?php  
   if(!empty($resume->basics)){
   ?>
   <!-- Header -->
   <header id="header" class="alt">
-    <span class="logo"><img src="<? echo $resume->basics['picture'];?>" alt="<? echo $resume->basics['name'];?>" /></span>
-    <h1><? echo $resume->basics['name'];?></h1>
-    <p><? echo $resume->basics['label'];?></p>
+    <span class="logo"><img src="<?php   echo $resume->basics['picture'];?>" alt="<?php   echo $resume->basics['name'];?>" /></span>
+    <h1><?php   echo $resume->basics['name'];?></h1>
+    <p><?php   echo $resume->basics['label'];?></p>
   </header>
-  <?}?>
+  <?php   } ?>
 
 
   <div id="main">

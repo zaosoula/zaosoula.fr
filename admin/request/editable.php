@@ -1,4 +1,4 @@
-<?
+<?php  
  //Load config file
  require_once('../../configs/config.php');
 

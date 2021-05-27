@@ -1,7 +1,7 @@
 <!-- Nav -->
 <nav id="nav">
   <ul>
-    <?
+    <?php  
     if(!empty($resume->basics))
       echo '<li><a href="#intro">'.$resume->param['title_intro'].'</a></li>';
     if(!empty($resume->education) || !empty($resume->work))

@@ -1,4 +1,4 @@
-<?php
+<?php  
 
 /**
  * @package    Resume
@@ -46,7 +46,7 @@ class Resume {
     private function loadBDDParam(){
       try{
         $sql = "SELECT *  FROM `param` WHERE `name` NOT LIKE 'auth_%'";
-        $pdo = Connexion::getInstance ();
+        $pdo = Connexion::getInstance();
         $sth = $pdo->query ( $sql );
         $res = $sth->fetchAll (PDO::FETCH_ASSOC);
 
@@ -54,6 +54,7 @@ class Resume {
           $this->param[$row['name']] = $row['value'];
         }
       } catch ( PDOException $e ) {
+        var_dump($e);
         logger('Resume loadBDDParam Error - PDOException : '.json_encode($e)); //Add in log
       }
     }

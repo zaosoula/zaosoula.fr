@@ -1,8 +1,8 @@
 <div class="abilities editableTools">
-<h2 class="editable" data-editable-mode="input" data-editable-name="param_title_tools"><strong><? echo $resume->param['title_tools'];?></strong></h2>
+<h2 class="editable" data-editable-mode="input" data-editable-name="param_title_tools"><strong><?php   echo $resume->param['title_tools'];?></strong></h2>
 <div class="row">
 
-  <?
+  <?php  
         foreach($resume->tools as $key => $value){
           if($key === 0){
             echo '<div class="6u 12u$(medium)"><ul class="no-bullets">';

@@ -1,4 +1,4 @@
-<?
+<?php  
 class ResumeUpdater extends Resume
 {
   public $param = array();

@@ -1,6 +1,6 @@
 <div class="experiences">
-  <h2><strong><? echo $resume->param['title_work'];?></strong></h2>
-  <?
+  <h2><strong><?php   echo $resume->param['title_work'];?></strong></h2>
+  <?php  
       foreach($resume->work as $key => $value){
         $value['website_status'] = ($value['website_status'])?'':'<span class="status">(Hors ligne)</span>';
           echo '<div class="experience row">
